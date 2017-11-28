@@ -1082,7 +1082,7 @@ a {
 }
 
 .breadcrumbs-item a:active,
-.breadcrumbs-item a:focus, {
+.breadcrumbs-item a:focus {
 	opacity: 0.1;
 }
 
