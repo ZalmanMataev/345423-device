@@ -10,18 +10,21 @@
   	<meta name="description" content="">
   </head>
   <body>
+
   	<header class="main-heder">
       <div class="main-heder-container">
         <div  class="main-logo">
           <a href="#">DEVICE</a>
         </div>
+
         <nav class="user-navigation">
-          <form class="user-search" method="get" action="https://device.ru">
+          <form class="user-search" method="post" action="http://echo.htmlacademy.ru">
             <label class="search-label" for="search">
             </label>
-            <input class="search-input" id="search" type="text" name="search" placeholder="Поиск по сайту">
+            <input class="search-input" id="search" type="text" name="search" placeholder="Поиск по сайту" required>
             <button class="search-button" type="submit">Найти</button>
           </form>
+
           <div class="user-block">
             <div class="user-block-Loggedin">
               <a href="#" class="user-block-contact user-block-id">Валентин Петухов</a>
@@ -42,26 +45,28 @@
           <ul class="main-menu">
             <li class="main-menu-item main-menu-item-menu-catalog">
               <a href="#" class="menu-catalog-link">Каталог товаров</a>
-              <ul class="menu-catalog">
-                <li class="menu-catalog-item">
-                  <a href="#" >Виртуальная реальность</a>
-                </li>
-                <li class="menu-catalog-item">
-                  <a href="#" >Моноподы для селфи</a>
-                </li>
-                <li class="menu-catalog-item">
-                  <a href="#" >Экшн-камеры</a>
-                </li>
-                <li class="menu-catalog-item">
-                  <a href="#" >Фитнес-браслеты</a>
-                </li>
-                <li class="menu-catalog-item">
-                  <a href="#" >Умные часы</a>
-                </li>
-                <li class="menu-catalog-item">
-                  <a href="#" >Квадрокоптеры</a>
-                </li>
-              </ul>
+              <nav class="menu-catalog">
+                <ul>
+                  <li class="menu-catalog-item">
+                    <a href="#" >Виртуальная реальность</a>
+                  </li>
+                  <li class="menu-catalog-item">
+                    <a href="#" >Фитнес-браслеты</a>
+                  </li>
+                  <li class="menu-catalog-item">
+                    <a href="#" >Квадрокоптеры</a>
+                  </li>
+                  <li class="menu-catalog-item">
+                    <a href="catalog.html" >Моноподы для селфи</a>
+                  </li>
+                  <li class="menu-catalog-item">
+                    <a href="#" >Умные часы</a>
+                  </li>
+                  <li class="menu-catalog-item">
+                    <a href="#" >Экшн-камеры</a>
+                  </li>
+                </ul>
+              </nav>
             </li>
             <li class="main-menu-item">
               <a href="#">Доставка</a>
@@ -99,8 +104,7 @@
                   как Бен Стиллер!
                 </span>
                 <p class="promo-slide-description">
-                  Самая длинная палка для селфи оступна в нашем магазине.
-                  Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+                  Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
                 <a class="btn promo-slide-button" href="#" >
                   Подробнее
@@ -346,7 +350,7 @@
       <button class="popup-close" type="button">Закрыть</button>
       <form class="popup-form" action="https://echo.test.ru" method="post">
         <label  class="popup-name" for="name">Ваше имя:
-          <input type="text" class="popup-input" name="name" placeholder="Представьтесь, пожалуйста" id="name">
+          <input type="text" class="popup-input" name="username" placeholder="Представьтесь, пожалуйста" id="name">
         </label>
         <label  class="popup-email" for="email">Ваш e-mail:
           <input type="text" class="popup-input" name="email" placeholder="Для отправки ответа" id="email">
@@ -357,8 +361,12 @@
         <button type="submit" class="btn popup-submit">Отправить</button>
       </form>
     </div>
+
     <div class="popup-map">
-      <img src="img/map-big.png" width="960" height="599" alt="Карта. Наш адрес: ул. Строителей 15">
+      <button class="close-btn" type="button" title="Закрыть">Закрыть</button>
+      <div class="map-interactive" id="map"></div>
     </div>
+    <div class="modal-overlay"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>
