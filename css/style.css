@@ -2087,9 +2087,9 @@ a {
   height: 100%;
 }
 
-.modal-overlay--show,
-.modal-feedback--show,
-.modal-map--show {
+.modal-overlay-show,
+.modal-feedback-show,
+.modal-map-show {
   display: block;
   animation: bounce 0.6s;
 }
